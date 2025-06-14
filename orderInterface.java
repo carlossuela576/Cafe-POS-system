@@ -2,7 +2,7 @@ import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class Orditf extends itmPrc{
+public class orderInterface extends itemPrice{
     Scanner sc = new Scanner(System.in);
     //ATTRIBUTES: variable initialization
     //orders input: store indexes to be used to access 'items' and 'prices' list

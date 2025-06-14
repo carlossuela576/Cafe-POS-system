@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Operations extends Orditf{
+public class Operations extends orderInterface{
     LocalDateTime transactionDateTime = LocalDateTime.now();
     DateTimeFormatter dateTimeformat = DateTimeFormatter.ofPattern("E, MMM dd yyyy HH:mm:ss");
 

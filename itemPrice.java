@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class itmPrc {
+public class itemPrice {
     //store items and prices in a Linked List
     LinkedList<String> items = new LinkedList<>();
     LinkedList<Integer> prices = new LinkedList<>();
