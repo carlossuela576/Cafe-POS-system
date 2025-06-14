@@ -2,7 +2,7 @@ import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class Orditf {
+public class Orditf extends itmPrc{
     Scanner sc = new Scanner(System.in);
     //ATTRIBUTES: variable initialization
 
@@ -11,15 +11,12 @@ public class Orditf {
     //for storing item prices
     LinkedList<Integer> orderFi = new LinkedList<>();
 
-    //store items and prices in a Linked List
-    LinkedList<String> items = new LinkedList<>();
-    LinkedList<Integer> prices = new LinkedList<>();
+
 
     //main ordering method
     public void getOrder(){
         boolean cicada = true;
-                //prompt only
-        System.out.println("Input orders: 1-" + prices.size());
+       
         while(cicada){
             System.out.print("order: ");
             int usOrder = (sc.nextInt()-1);
@@ -38,13 +35,6 @@ public class Orditf {
                 default:
                     throw new InputMismatchException();
             }
-        }
-    }
-
-    public void displayOrder(){
-        for(int i = 0; i < orders.size(); i++){
-            int refVar = orders.get(i);
-            System.out.println(items.get(refVar) + "---" + prices.get(refVar));
         }
     }
 }

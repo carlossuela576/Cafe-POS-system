@@ -1,8 +1,13 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.LinkedList;
 import java.util.Scanner;
 
-public class itmPrc extends Orditf{
+public class itmPrc {
+    //store items and prices in a Linked List
+    LinkedList<String> items = new LinkedList<>();
+    LinkedList<Integer> prices = new LinkedList<>();
+
     
     File Itemtxtfile = new File("Data\\itemElem.txt");
     
