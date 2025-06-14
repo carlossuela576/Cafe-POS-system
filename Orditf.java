@@ -5,11 +5,10 @@ import java.util.Scanner;
 public class Orditf extends itmPrc{
     Scanner sc = new Scanner(System.in);
     //ATTRIBUTES: variable initialization
-
-    //orders input
+    //orders input: store indexes to be used to access 'items' and 'prices' list
     LinkedList<Integer> orders = new LinkedList<>();
-    //for storing item prices
-    LinkedList<Integer> orderFi = new LinkedList<>();
+    
+
     //main ordering method
     public void getOrder(){
         boolean cicada = true;
@@ -35,6 +34,8 @@ public class Orditf extends itmPrc{
             }
         }
     }
+
+    //displays chosen orders from the menu
     public void displayOrder(){
         System.out.println();
         System.out.println("***re-confirm orders***");
@@ -42,6 +43,5 @@ public class Orditf extends itmPrc{
         int refVar = orders.get(i);
         System.out.println(items.get(refVar) + " --- " + prices.get(refVar));
         }
-        System.out.println();
     }
 }
