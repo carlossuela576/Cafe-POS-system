@@ -10,31 +10,38 @@ public class Orditf extends itmPrc{
     LinkedList<Integer> orders = new LinkedList<>();
     //for storing item prices
     LinkedList<Integer> orderFi = new LinkedList<>();
-
-
-
     //main ordering method
     public void getOrder(){
         boolean cicada = true;
        
+        System.out.println("Input orders: 1-" + prices.size());
         while(cicada){
             System.out.print("order: ");
             int usOrder = (sc.nextInt()-1);
             sc.nextLine();
             orders.add(usOrder);
             
-            System.out.print("add order? Y/N: ");
+            System.out.print("Add, Done A/D: ");
             String addDecision = sc.nextLine().toUpperCase();
             switch (addDecision) {
-                case "Y":
+                case "A":
                     cicada = true;
                     break;
-                case "N":
+                case "D":
                     cicada = false;
                     break;
                 default:
                     throw new InputMismatchException();
             }
         }
+    }
+    public void displayOrder(){
+        System.out.println();
+        System.out.println("***re-confirm orders***");
+        for(int i = 0; i < orders.size(); i++){
+        int refVar = orders.get(i);
+        System.out.println(items.get(refVar) + " --- " + prices.get(refVar));
+        }
+        System.out.println();
     }
 }

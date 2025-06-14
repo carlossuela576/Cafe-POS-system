@@ -19,9 +19,11 @@ public class itmPrc {
                 String data = readitem.nextLine();
                 items.add(data);
             }
+            readitem.close();
         } catch (FileNotFoundException e) {
             System.out.println("something went wrong");
         }
+        
     }
 
     File PricetxtFile = new File("Data\\prices.txt");
@@ -33,6 +35,7 @@ public class itmPrc {
                 int data = readprice.nextInt();
                 prices.add(data);
             }
+            readprice.close();
         } catch (FileNotFoundException e) {
             System.out.println("Something went wrong");
         }
