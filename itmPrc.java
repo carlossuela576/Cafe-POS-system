@@ -35,7 +35,7 @@ public class itmPrc extends Orditf{
     
     public void displayMenu(){
         for(int i = 0; i < prices.size(); i++){
-            System.out.println(items.get(i) + " --- " + prices.get(i));
+            System.out.println((i+1) + ". " + items.get(i) + " --- " + prices.get(i));
         }
     }
 }
