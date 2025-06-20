@@ -14,24 +14,42 @@ public class orderInterface extends itemPrice{
         boolean cicada = true;
        
         System.out.println("Input orders: 1-" + prices.size());
-        while(cicada){
-            System.out.print("order: ");
-            int usOrder = (sc.nextInt()-1);
-            sc.nextLine();
-            orders.add(usOrder);
-            
-            System.out.print("Add, Done A/D: ");
-            String addDecision = sc.nextLine().toUpperCase();
-            switch (addDecision) {
-                case "A":
-                    cicada = true;
-                    break;
-                case "D":
-                    cicada = false;
-                    break;
-                default:
-                    throw new InputMismatchException();
+        try{
+            while(cicada){
+                System.out.print("order: ");
+                int usOrder = (sc.nextInt()-1);
+                sc.nextLine();
+                orders.add(usOrder);
+                
+                System.out.print("Add, Done, Remove A/D/R: ");
+                String addDecision = sc.nextLine().toUpperCase();
+                switch (addDecision) {
+                    case "A":
+                        cicada = true;
+                        break;
+                    case "D":
+                        cicada = false;
+                        break;
+                    case "R":
+                        //show orders
+                        for(int i = 0; i < orders.size(); i++){
+                        int refVar = orders.get(i);
+                        System.out.println(items.get(refVar) + " --- " + prices.get(refVar));
+                        }
+                        //prompt
+                        System.out.print("remove: ");
+                        //selection
+                        int remo = (sc.nextInt()-1);
+                        sc.nextLine();
+                        orders.remove(remo);
+                        cicada = true;
+                        break;
+                    default:
+                        throw new InputMismatchException();
+                }
             }
+        } catch(InputMismatchException e){
+            e.printStackTrace();
         }
     }
 
